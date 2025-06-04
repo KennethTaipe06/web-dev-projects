@@ -296,9 +296,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         transform: translateY(-20px);
     }
 }
-.txt-rotate > .wrap {
+/* .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
-}
+} */
 
 /************ Skills Css ************/
 .skill {
@@ -615,4 +615,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+.proj-imgbx:hover .proj-txtx,
+.proj-imgbx:hover .proj-txtx h4,
+.proj-imgbx:hover .proj-txtx span {
+  color: #fff !important;
 }

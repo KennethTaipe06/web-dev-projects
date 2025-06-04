@@ -15,11 +15,11 @@ export const Footer = () => {
             <img src={logo} alt="Logo" />
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
-            <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt="Icon" /></a>
-              <a href="#"><img src={navIcon2} alt="Icon" /></a>
-              <a href="#"><img src={navIcon3} alt="Icon" /></a>
-            </div>
+              <div className="social-icon">
+                <a href="https://www.linkedin.com/in/kenneth-taipe-208838195/"><img src={navIcon1} alt="" /></a>
+                <a href="https://github.com/KennethTaipe06"><img src={navIcon2} alt="" /></a>
+                <a href="https://www.instagram.com/kenneth_1803_/"><img src={navIcon3} alt="" /></a>
+              </div>
             <p>Copyright 2022. All Rights Reserved</p>
           </Col>
         </Row>

@@ -1,43 +1,20 @@
-import { useState, useEffect } from "react";
-import { Col, Row, Alert } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
+import cv from '../assets/CV.pdf';
 
-export const Newsletter = ({ status, message, onValidated }) => {
-  const [email, setEmail] = useState('');
-
-  useEffect(() => {
-    if (status === 'success') clearFields();
-  }, [status])
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    email &&
-    email.indexOf("@") > -1 &&
-    onValidated({
-      EMAIL: email
-    })
-  }
-
-  const clearFields = () => {
-    setEmail('');
-  }
-
+export const Newsletter = () => {
   return (
-      <Col lg={12}>
-        <div className="newsletter-bx wow slideInUp">
-          <Row>
-            <Col lg={12} md={6} xl={5}>
-              <h3>Subscribe to our Newsletter<br></br> & Never miss latest updates</h3>
-              {status === 'sending' && <Alert>Sending...</Alert>}
-              {status === 'error' && <Alert variant="danger">{message}</Alert>}
-              {status === 'success' && <Alert variant="success">{message}</Alert>}
+      <Col lg={12} className="d-flex align-items-center justify-content-center" style={{minHeight: '300px'}}>
+        <div className="newsletter-bx wow slideInUp w-100 d-flex align-items-center justify-content-center" id="cv" style={{minHeight: '220px'}}>
+          <Row className="w-100 d-flex align-items-center justify-content-center text-center">
+            <Col lg={12} md={12} xl={12} className="mb-4">
+              <h3 className="w-100" style={{fontWeight: 'bold'}}>Descarga mi CV</h3>
             </Col>
-            <Col md={6} xl={7}>
-              <form onSubmit={handleSubmit}>
-                <div className="new-email-bx">
-                  <input value={email} type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email Address" />
-                  <button type="submit">Submit</button>
-                </div>
-              </form>
+            <Col md={12} xl={12} className="d-flex align-items-center justify-content-center">
+              <div className="new-email-bx d-flex align-items-center justify-content-center w-100">
+                <a href={cv} download className="btn btn-primary" style={{width: '250px', borderRadius: '30px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: '1.1rem'}}>
+                  Descargar CV
+                </a>
+              </div>
             </Col>
           </Row>
         </div>
